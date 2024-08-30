@@ -6,7 +6,7 @@
 
 ## Установка
 
-в Xcode меню File -> Add Package dependecies -> Добавить папку с фоеймворком
+в Xcode меню File -> Add Package dependecies -> Добавить папку с фреймворком
 
 ## Использование
 
