@@ -71,7 +71,7 @@ internal extension IEndpoint {
 		guard let boundaryData = "\r\n--\(boundary)\r\n".data(using: .utf8),
 			  let contentDispositionData =
 				"Content-Disposition: form-data; name=\"\(fieldKey.rawValue)\"; filename=\"\(file.name)\"\r\n".data(using: .utf8),
-			  let contentTypeData = "Content-Type: image/\(file.ext)\r\n\r\n".data(using: .utf8),
+			  let contentTypeData = "Content-Type: \(file.type?.mimeType ?? "")\r\n\r\n".data(using: .utf8),
 			  let fileData = file.data
 		else { return }
 		mutableData.append(boundaryData)
